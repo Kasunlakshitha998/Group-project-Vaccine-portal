@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Josefin+Sans:ital@1&family=Playfair:wght@300&family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Josefin+Sans:ital@1&family=Playfair:wght@300&family=Roboto+Mono:wght@200&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Playfair;
+    box-sizing: border-box;
+}
+
+.conteiner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: linear-gradient(rgba(198, 218, 237, 0.164),rgba(191, 195, 245, 0.466));
+    background-repeat: no-repeat;
+    background-position:center;
+    /*background-size: cover;*/
+}
+
+.image_group {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+
+    
+.image_group img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.image_group::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: 1;
+    background-image: linear-gradient(rgba(198, 218, 237, 0.164),rgba(191, 195, 245, 0.466));
+    background-blend-mode: color; 
+}
+
+.form_boxr{
+    width:380px;
+    padding: 10px;
+    text-align: center; 
+    margin: 30px auto; 
+    border-radius: 10px;
+}
+
+.form_boxr h1{
+    font-family: Roboto Slab;
+    font-size: 45px;
+    color: rgb(97, 123, 255);
+    position: relative;
+    margin: 5px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    
+}
+
+.input_field{   
+    border: 2px solid rgb(31, 119, 218);
+    margin: 14px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 18px; 
+    padding-right:25px;
+}
+
+.input_field input{
+    width: 280px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 14px 4px 14px 10px;
+    margin-right: 0px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.input_field:hover{
+    border: 2px solid rgba(1, 2, 70, 0.877);
+}
+
+.input_field i{
+    margin-left: 15px;
+    margin-right: 10px;
+    color: rgb(85, 117, 241);
+    font-size: 20px;
+}
+
+#eye {
+    cursor: pointer;
+}
+
+.btn_register{
+    background-color: rgb(25, 93, 239);
+    font-size: 22px;
+    padding: 10px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    margin-top: 10px;
+    width: 94%;
+    border: none;
+}
+
+.btn:hover{
+    background-color: rgba(36, 101, 241, 0.646);
+    color: #ffffffe2;
+    cursor: pointer;
+}
+.check_box{
+    position: relative;
+    left: -8%;
+    font-size: 16px;
+}
+
+.check_box input[type=checkbox]{
+    position: relative;
+    top:1.5px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.check_box p,
+.check_box p a{   
+    font-family: sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login_form p,
+.login_form a{
+    text-decoration: none; 
+    font-weight:500;
+    font-size: 18px;
+}
+
+.error p{
+    background-color: rgb(246, 189, 189);
+    color: rgb(228, 1, 1);
+    border-radius: 25px;
+    padding: 8px;
+    font-weight: 500;
+}
+
+@media ( max-width: 900px){
+    .image_group{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .form_boxr{
+        width:380px;
+        height: 600px;
+        padding: 10px;
+        text-align: center; 
+        margin: 50px auto; 
+        z-index: 1; 
+        background-color: rgba(237, 237, 242, 0.783);
+        border-radius: 30px;
+    } 
+    .form_boxr h1{
+        color: rgba(5, 5, 5, 0.943);    
+    } 
+    .input_field{   
+        border: 2px solid rgb(25, 24, 24, 0.9); 
+    } 
+    .input_field:hover{
+        border: 3px solid rgb(25, 24, 24, 0.9);
+    }
+    .input_field i{
+        color: rgba(14, 14, 18, 0.95);      
+    }
+    .btn_register{
+        background-color: rgb(25, 25, 27);
+    }
+    .btn:hover{
+        background-color: rgb(25, 25, 27, 0.92);
+        color: #ffffffe2;
+        cursor: pointer;
+    }
+    input::placeholder{
+        color: rgb(31, 26, 26);
+    }
+
+}
